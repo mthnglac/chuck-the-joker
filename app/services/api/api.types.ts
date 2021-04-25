@@ -1,13 +1,14 @@
 import { GeneralApiProblem } from "./api-problem"
-import { Character } from "../../models/character/character"
 
-export interface User {
-  id: number
-  name: string
+export interface Joke {
+  id: string
+  value: string
 }
 
-export type GetUsersResult = { kind: "ok"; users: User[] } | GeneralApiProblem
-export type GetUserResult = { kind: "ok"; user: User } | GeneralApiProblem
+export interface Category {
+  title: string
+}
 
-export type GetCharactersResult = { kind: "ok"; characters: Character[] } | GeneralApiProblem
-export type GetCharacterResult = { kind: "ok"; character: Character } | GeneralApiProblem
+export type GetJokeResult = { kind: "ok"; joke: Joke } | GeneralApiProblem
+
+export type GetCategoriesResult = { kind: "ok"; categories: Category[] } | GeneralApiProblem

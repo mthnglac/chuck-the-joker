@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { Image, FlatList, TextStyle, View, ViewStyle, ImageStyle } from "react-native"
+import { FlatList, TextStyle, View, ViewStyle } from "react-native"
 import { useNavigation } from "@react-navigation/native"
 import { observer } from "mobx-react-lite"
 import { Header, Screen, Text, Wallpaper } from "../../components"
@@ -29,11 +29,6 @@ const LIST_CONTAINER: ViewStyle = {
   flexDirection: "row",
   padding: 10,
 }
-const IMAGE: ImageStyle = {
-  borderRadius: 35,
-  height: 65,
-  width: 65,
-}
 const LIST_TEXT: TextStyle = {
   marginLeft: 10,
 }
@@ -45,12 +40,12 @@ export const DemoListScreen = observer(function DemoListScreen() {
   const navigation = useNavigation()
   const goBack = () => navigation.goBack()
 
-  const { characterStore } = useStores()
-  const { characters } = characterStore
+  const { categoryStore } = useStores()
+  const { categories } = categoryStore
 
   useEffect(() => {
     async function fetchData() {
-      await characterStore.getCharacters()
+      await categoryStore.getCategories()
     }
 
     fetchData()
@@ -69,13 +64,12 @@ export const DemoListScreen = observer(function DemoListScreen() {
         />
         <FlatList
           contentContainerStyle={FLAT_LIST}
-          data={characters}
-          keyExtractor={(item) => String(item.id)}
+          data={categories}
+          keyExtractor={(item) => String(item)}
           renderItem={({ item }) => (
             <View style={LIST_CONTAINER}>
-              <Image source={{ uri: item.image }} style={IMAGE} />
               <Text style={LIST_TEXT}>
-                {item.name} ({item.status})
+                {item.title}
               </Text>
             </View>
           )}

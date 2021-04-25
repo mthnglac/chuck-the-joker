@@ -45,11 +45,11 @@ export class Api {
   }
 
   /**
-   * Gets a list of users.
+   * Gets a list of categories.
    */
-  async getUsers(): Promise<Types.GetUsersResult> {
+  async getCategories(): Promise<Types.GetCategoriesResult> {
     // make the api call
-    const response: ApiResponse<any> = await this.apisauce.get(`/users`)
+    const response: ApiResponse<any> = await this.apisauce.get(`/categories`)
 
     // the typical ways to die when calling an api
     if (!response.ok) {
@@ -57,30 +57,29 @@ export class Api {
       if (problem) return problem
     }
 
-    const convertUser = (raw) => {
+    const convertCategory = (raw: string) => {
       return {
-        id: raw.id,
-        name: raw.name,
+        title: raw,
       }
     }
 
     // transform the data into the format we are expecting
     try {
-      const rawUsers = response.data
-      const resultUsers: Types.User[] = rawUsers.map(convertUser)
-      return { kind: "ok", users: resultUsers }
+      const rawCategories = response.data
+      const resultCategories: Types.Category[] = rawCategories.map(convertCategory)
+      return { kind: "ok", categories: resultCategories }
     } catch {
       return { kind: "bad-data" }
     }
   }
 
   /**
-   * Gets a single user by ID
+   * Gets a single joke
    */
 
-  async getUser(id: string): Promise<Types.GetUserResult> {
+  async getJoke(): Promise<Types.GetJokeResult> {
     // make the api call
-    const response: ApiResponse<any> = await this.apisauce.get(`/users/${id}`)
+    const response: ApiResponse<any> = await this.apisauce.get('/random')
 
     // the typical ways to die when calling an api
     if (!response.ok) {
@@ -90,12 +89,13 @@ export class Api {
 
     // transform the data into the format we are expecting
     try {
-      const resultUser: Types.User = {
+      const resultJoke: Types.Joke = {
         id: response.data.id,
-        name: response.data.name,
+        value: response.data.value,
       }
-      return { kind: "ok", user: resultUser }
-    } catch {
+      return { kind: "ok", joke: resultJoke }
+    } catch(e) {
+      __DEV__ && console.tron.log(e.message)
       return { kind: "bad-data" }
     }
   }
