@@ -1,8 +1,9 @@
-import React, { useEffect } from "react"
-import { FlatList, TextStyle, View, ViewStyle } from "react-native"
+import React, { useEffect, useState } from "react"
+import { TextStyle, View, ViewStyle } from "react-native"
 import { useNavigation } from "@react-navigation/native"
+import { Picker } from '@react-native-picker/picker';
 import { observer } from "mobx-react-lite"
-import { Header, Screen, Text, Wallpaper } from "../../components"
+import { Header, Screen, Wallpaper } from "../../components"
 import { color, spacing } from "../../theme"
 import { useStores } from "../../models"
 
@@ -24,31 +25,22 @@ const HEADER_TITLE: TextStyle = {
   lineHeight: 15,
   textAlign: "center",
 }
-const LIST_CONTAINER: ViewStyle = {
-  alignItems: "center",
-  flexDirection: "row",
-  padding: 10,
-}
-const LIST_TEXT: TextStyle = {
-  marginLeft: 10,
-}
-const FLAT_LIST: ViewStyle = {
-  paddingHorizontal: spacing[4],
+const PICKER_TEXT: TextStyle = {
+  color: "white"
 }
 
 export const DemoListScreen = observer(function DemoListScreen() {
   const navigation = useNavigation()
   const goBack = () => navigation.goBack()
 
+  const [selectedCategory, setSelectedCategory] = useState()
   const { categoryStore } = useStores()
   const { categories } = categoryStore
 
   useEffect(() => {
-    async function fetchData() {
+    ;(async () => {
       await categoryStore.getCategories()
-    }
-
-    fetchData()
+    })()
   }, [])
 
   return (
@@ -62,18 +54,13 @@ export const DemoListScreen = observer(function DemoListScreen() {
           style={HEADER}
           titleStyle={HEADER_TITLE}
         />
-        <FlatList
-          contentContainerStyle={FLAT_LIST}
-          data={categories}
-          keyExtractor={(item) => String(item)}
-          renderItem={({ item }) => (
-            <View style={LIST_CONTAINER}>
-              <Text style={LIST_TEXT}>
-                {item.title}
-              </Text>
-            </View>
-          )}
-        />
+        <Picker selectedValue={selectedCategory} onValueChange={(itemValue) => {
+          setSelectedCategory(itemValue)
+        }}>
+          {categories.map((currentValue, currentIndex) => (
+            <Picker.Item label={currentValue.title} key={currentIndex} value={currentValue.title} style={PICKER_TEXT} />
+          ))}
+        </Picker>
       </Screen>
     </View>
   )
