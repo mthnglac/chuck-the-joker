@@ -2196,10 +2196,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
-"@eslint/eslintrc@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-0.4.0.tgz#99cc0a0584d72f1df38b900fb062ba995f395547"
-  integrity sha512-2ZPCc+uNbjV5ERJr+aKSPRwZgKd2z11x0EgLvb1PURmUrn9QNRXFqje0Ldq454PfAVyaJYyrDvvIKSFP4NnBog==
+"@eslint/eslintrc@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-0.4.1.tgz#442763b88cecbe3ee0ec7ca6d6dd6168550cbf14"
+  integrity sha512-5v7TDE9plVhvxQeWLXDTvFvJBdH6pEsdnl2g/dAptmuFEPedQ4Erq5rsDsX+mvAM610IhNaO2W5V1dOOnDKxkQ==
   dependencies:
     ajv "^6.12.4"
     debug "^4.1.1"
@@ -3259,10 +3259,10 @@
   dependencies:
     nanoid "^3.1.15"
 
-"@react-navigation/stack@5.14.4":
-  version "5.14.4"
-  resolved "https://registry.yarnpkg.com/@react-navigation/stack/-/stack-5.14.4.tgz#32f6717c03494f0ca6cf0dd43d8302af824de9e9"
-  integrity sha512-gQjWK8JHtVkD1p7wzjtSPuScJI0mSAk/N/gzgjQZo+rDUwgM8rOTDcVNRbtEOqCEgLQcZrZQHwhOjkrJirehjQ==
+"@react-navigation/stack@5.14.5":
+  version "5.14.5"
+  resolved "https://registry.yarnpkg.com/@react-navigation/stack/-/stack-5.14.5.tgz#dc615cd7d270ba79e3330dcb50c2819d0e1f3850"
+  integrity sha512-hpdn1SS0tc3/3atkV2Q2y++n5B4e0rUcCj4W43PODMu72yX2m0LkKAAcpkPDCWAvwnLLIoLAEl5BEifZigl/6A==
   dependencies:
     color "^3.1.3"
     react-native-iphone-x-helper "^1.3.0"
@@ -4390,10 +4390,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-native@0.64.4":
-  version "0.64.4"
-  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.64.4.tgz#9f11bef7dd5520801884829c73b19d75aa42e73c"
-  integrity sha512-VqnlmadGkD5usREvnuyVpWDS1W8f6cCz6MP5fZdgONsaZ9/Ijfb9Iq9MZ5O3bnW1OyJixDX9HtSp3COsFSLD8Q==
+"@types/react-native@0.64.5":
+  version "0.64.5"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.64.5.tgz#219738b52b2e372ec057d3c8f20fbd6c37b245cd"
+  integrity sha512-k0r8MnQX7UFboZDvMKLov26gFLXKrNgLhCfSVhjaZ6wMUofKijxvee7/wgfAqtT2zS5FR4an4+qn0r72SCbw3g==
   dependencies:
     "@types/react" "*"
 
@@ -7580,10 +7580,10 @@ detect-port@^1.3.0:
     address "^1.0.1"
     debug "^2.6.0"
 
-detox@18.12.2:
-  version "18.12.2"
-  resolved "https://registry.yarnpkg.com/detox/-/detox-18.12.2.tgz#8fa01e22ea7f627ef041824af15dc2bc3c2e46f9"
-  integrity sha512-D9BBIUe+NhFuEQQMI2dHGDg03Hw64AlSdCnF82MOjRRkLWio4ZpE/8SZsAnPGfPqb06fPAAvcBmVq5pmqCzlIw==
+detox@18.13.0:
+  version "18.13.0"
+  resolved "https://registry.yarnpkg.com/detox/-/detox-18.13.0.tgz#c6108bfcc0a5579ea5f1f975222ca62773511b3c"
+  integrity sha512-YQPhi+uUGhVXYQm4W76EyKXdDKXnxq3dO+9ua22gGhNGwiJDbV8TUOavZNMbjBKWLb+OueGKOEBp4uNGOrVANw==
   dependencies:
     bunyan "^1.8.12"
     bunyan-debug-stream "^1.1.0"
@@ -7599,6 +7599,7 @@ detox@18.12.2:
     proper-lockfile "^3.0.2"
     resolve-from "^5.0.0"
     sanitize-filename "^1.6.1"
+    semver "^7.0.0"
     serialize-error "^8.0.1"
     shell-quote "^1.7.2"
     signal-exit "^3.0.3"
@@ -8298,13 +8299,13 @@ eslint-visitor-keys@^2.0.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-2.0.0.tgz#21fdc8fbcd9c795cc0321f0563702095751511a8"
   integrity sha512-QudtT6av5WXels9WjIM7qz1XD1cWGvX4gGXvp/zBn9nXG02D0utdU3Em2m/QjTnrsk6bBjmCygl3rmj118msQQ==
 
-eslint@7.25.0:
-  version "7.25.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.25.0.tgz#1309e4404d94e676e3e831b3a3ad2b050031eb67"
-  integrity sha512-TVpSovpvCNpLURIScDRB6g5CYu/ZFq9GfX2hLNIV4dSBKxIWojeDODvYl3t0k0VtMxYeR8OXPCFE5+oHMlGfhw==
+eslint@7.26.0:
+  version "7.26.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.26.0.tgz#d416fdcdcb3236cd8f282065312813f8c13982f6"
+  integrity sha512-4R1ieRf52/izcZE7AlLy56uIHHDLT74Yzz2Iv2l6kDaYvEu9x+wMB5dZArVL8SYGXSYV2YAg70FcW5Y5nGGNIg==
   dependencies:
     "@babel/code-frame" "7.12.11"
-    "@eslint/eslintrc" "^0.4.0"
+    "@eslint/eslintrc" "^0.4.1"
     ajv "^6.10.0"
     chalk "^4.0.0"
     cross-spawn "^7.0.2"
@@ -12837,10 +12838,10 @@ mobx@6.3.0:
   resolved "https://registry.yarnpkg.com/mobx/-/mobx-6.3.0.tgz#a8fb693c3047bdfcb1eaff9aa48e36a7eb084f96"
   integrity sha512-Aa1+VXsg4WxqJMTQfWoYuJi5UD10VZhiobSmcs5kcmI3BIT0aVtn7DysvCeDADCzl7dnbX+0BTHUj/v7gLlZpQ==
 
-mocha@8.3.2:
-  version "8.3.2"
-  resolved "https://registry.yarnpkg.com/mocha/-/mocha-8.3.2.tgz#53406f195fa86fbdebe71f8b1c6fb23221d69fcc"
-  integrity sha512-UdmISwr/5w+uXLPKspgoV7/RXZwKRTiTjJ2/AC5ZiEztIoOYdfKb19+9jNmEInzx5pBsCyJQzarAxqIGBNYJhg==
+mocha@8.4.0:
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/mocha/-/mocha-8.4.0.tgz#677be88bf15980a3cae03a73e10a0fc3997f0cff"
+  integrity sha512-hJaO0mwDXmZS4ghXsvPVriOhsxQ7ofcpQdm8dE+jISUOKopitvnXFQmpRR7jd2K6VBG6E26gU3IAbXXGIbu4sQ==
   dependencies:
     "@ungap/promise-all-settled" "1.1.2"
     ansi-colors "4.1.1"
@@ -14648,10 +14649,10 @@ react-dev-utils@^9.0.0:
     strip-ansi "5.2.0"
     text-table "0.2.0"
 
-react-devtools-core@4.13.0:
-  version "4.13.0"
-  resolved "https://registry.yarnpkg.com/react-devtools-core/-/react-devtools-core-4.13.0.tgz#fa80ee03b1a975c1d9898e24de841e45a4b22d30"
-  integrity sha512-KR+0pLw8wTjOVr+9AECe5ctmycaAjbmxN3bbdB0vmlwm0JkxNnKMxDzanf+4V8IuPBQWgm8qdWpbSOqhu1l14g==
+react-devtools-core@4.13.2:
+  version "4.13.2"
+  resolved "https://registry.yarnpkg.com/react-devtools-core/-/react-devtools-core-4.13.2.tgz#61399c6648d3ded5917eaa4e59b474b3fa838faa"
+  integrity sha512-/lA5FVLMhUHrkQwtEf5wZNCKsXmc2RBZMNS/kkq3WlXPg2Y7COUGMh0Lmz34jjMpM0kvLMDuj+DqsPT/jSADbw==
   dependencies:
     shell-quote "^1.6.1"
     ws "^7"
@@ -14863,10 +14864,10 @@ react-native-web@0.16.2:
     prop-types "^15.6.0"
     react-timer-mixin "^0.13.4"
 
-react-native@0.64.0:
-  version "0.64.0"
-  resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.64.0.tgz#c3bde5b638bf8bcf12bae6e094930d39cb942ab7"
-  integrity sha512-8dhSHBthgGwAjU+OjqUEA49229ThPMQH7URH0u8L0xoQFCnZO2sZ9Wc6KcbxI0x9KSmjCMFFZqRe3w3QsRv64g==
+react-native@0.64.1:
+  version "0.64.1"
+  resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.64.1.tgz#cd38f5b47b085549686f34eb0c9dcd466f307635"
+  integrity sha512-jvSj+hNAfwvhaSmxd5KHJ5HidtG0pDXzoH6DaqNpU74g3CmAiA8vuk58B5yx/DYuffGq6PeMniAcwuh3Xp4biQ==
   dependencies:
     "@jest/create-cache-key-function" "^26.5.0"
     "@react-native-community/cli" "^5.0.1-alpha.0"
